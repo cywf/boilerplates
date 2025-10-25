@@ -9,6 +9,8 @@ A comprehensive collection of production-ready boilerplates, templates, and conf
 - [Docker & Containers](#docker--containers)
 - [CI/CD Pipelines](#cicd-pipelines)
 - [Configuration Files](#configuration-files)
+- [Database Templates](#database-templates)
+- [Kubernetes & Infrastructure](#kubernetes--infrastructure)
 - [Templates](#templates)
 - [Gitignore Files](#gitignore-files)
 
@@ -23,6 +25,7 @@ Production-ready Python project structures with modern tooling.
 | **Basic Python** | Minimal Python project structure | [`python/basic/`](python/basic/) |
 | **Flask App** | Flask web application with blueprints | [`python/flask/`](python/flask/) |
 | **FastAPI App** | Modern async FastAPI application | [`python/fastapi/`](python/fastapi/) |
+| **CLI Tool** | Command-line tool with Click | [`python/cli-tool/`](python/cli-tool/) |
 
 **Features:**
 - Clean project structure
@@ -42,6 +45,7 @@ Modern JavaScript/TypeScript project templates.
 |----------|-------------|------|
 | **Express API** | RESTful API with Express.js | [`nodejs/express/`](nodejs/express/) |
 | **React App** | React application with routing | [`nodejs/react/`](nodejs/react/) |
+| **CLI Tool** | Command-line tool with Commander.js | [`nodejs/cli-tool/`](nodejs/cli-tool/) |
 
 **Features:**
 - ES6+ with modules
@@ -102,6 +106,46 @@ Standard configuration files for development tools.
 | **Prettier** | Code formatting rules | [`configs/prettier/`](configs/prettier/) |
 | **EditorConfig** | Editor consistency | [`configs/editorconfig/`](configs/editorconfig/) |
 | **Python Tools** | Black, mypy, pytest config | [`configs/pyproject.toml`](configs/pyproject.toml) |
+
+## 💾 Database Templates
+
+Docker Compose configurations for popular databases.
+
+### Available Databases
+
+| Database | Description | Path |
+|----------|-------------|------|
+| **MongoDB** | NoSQL document database with Mongo Express | [`database/mongodb/`](database/mongodb/) |
+| **PostgreSQL** | Relational database with pgAdmin | [`database/postgresql/`](database/postgresql/) |
+| **MySQL** | Relational database with phpMyAdmin | [`database/mysql/`](database/mysql/) |
+
+**Features:**
+- Docker Compose setup
+- Persistent volumes
+- Admin interfaces included
+- Initialization scripts
+- Health checks
+
+## ☸️ Kubernetes & Infrastructure
+
+Kubernetes manifests and Terraform templates for cloud deployments.
+
+### Kubernetes
+
+| Template | Description | Path |
+|----------|-------------|------|
+| **Deployment** | Application deployment manifests | [`kubernetes/deployment.yml`](kubernetes/deployment.yml) |
+| **Service** | Service definitions | [`kubernetes/service.yml`](kubernetes/service.yml) |
+| **Ingress** | Ingress configuration | [`kubernetes/ingress.yml`](kubernetes/ingress.yml) |
+| **ConfigMap/Secret** | Configuration management | [`kubernetes/configmap.yml`](kubernetes/configmap.yml) |
+
+### Terraform
+
+| Template | Description | Path |
+|----------|-------------|------|
+| **AWS Setup** | Terraform AWS configuration | [`terraform/`](terraform/) |
+| **Variables** | Input variables template | [`terraform/variables.tf`](terraform/variables.tf) |
+| **Providers** | Provider configuration | [`terraform/providers.tf`](terraform/providers.tf) |
 
 ## 📄 Templates
 
