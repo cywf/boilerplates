@@ -1,0 +1,39 @@
+---
+# ConfigMap for application configuration
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myapp-config
+  labels:
+    app: myapp
+data:
+  APP_NAME: "myapp"
+  APP_ENV: "production"
+  LOG_LEVEL: "info"
+  API_URL: "https://api.example.com"
+  # You can also include files
+  # config.json: |
+  #   {
+  #     "setting1": "value1",
+  #     "setting2": "value2"
+  #   }
+
+---
+# Secret for sensitive data (base64 encoded)
+apiVersion: v1
+kind: Secret
+metadata:
+  name: myapp-secret
+  labels:
+    app: myapp
+type: Opaque
+data:
+  # Values must be base64 encoded
+  # echo -n 'my-secret-value' | base64
+  DATABASE_URL: cG9zdGdyZXNxbDovL3VzZXI6cGFzc3dvcmRAbG9jYWxob3N0OjU0MzIvZGI=
+  API_KEY: eW91ci1hcGkta2V5LWhlcmU=
+  JWT_SECRET: eW91ci1qd3Qtc2VjcmV0LWhlcmU=
+stringData:
+  # Or use stringData for plain text (will be auto-encoded)
+  # DATABASE_URL: postgresql://user:password@localhost:5432/db
+  # API_KEY: your-api-key-here
